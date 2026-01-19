@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE X NIKE | EXPLORE THE BEYOND</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Estrellas de fondo animadas */
+        .stars {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com');
+            z-index: -1;
+        }
+
+        /* Animación del Cohete (Estilo Nike Move) */
+        .rocket-intro {
+            position: fixed;
+            top: 50%;
+            left: -200px;
+            font-size: 5rem;
+            z-index: 100;
+            transform: translateY(-50%) rotate(45deg);
+            animation: launch 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+        }
+
+        @keyframes launch {
+            0% { left: -200px; opacity: 0; }
+            30% { opacity: 1; }
+            100% { left: 120%; opacity: 1; }
+        }
+
+        .nike-title {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 0.8;
+        }
+
+        .planet-card:hover img {
+            transform: scale(1.1) rotate(5deg);
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cohete que pasa al entrar -->
+    <div class="rocket-intro">🚀</div>
+
+    <div class="stars"></div>
+
+    <!-- Header Estilo NASA -->
+    <nav class="p-6 flex justify-between items-center border-b border-gray-800">
+        <img src="https://upload.wikimedia.org" alt="NASA" class="h-12">
+        <ul class="flex space-x-8 font-bold text-xs tracking-widest uppercase">
+            <li class="hover:text-gray-400 cursor-pointer">Misiones</li>
+            <li class="hover:text-gray-400 cursor-pointer">Tecnología</li>
+            <li class="hover:text-gray-400 cursor-pointer">Universo</li>
+        </ul>
+        <div class="font-black text-2xl italic">JUST EXPLORE IT.</div>
+    </nav>
+
+    <!-- Hero Section Estilo Nike -->
+    <main class="relative h-screen flex flex-col justify-center items-center text-center p-4">
+        <h1 class="nike-title text-[12vw] md:text-[15vw] z-10">THE NEXT <br> FRONTIER</h1>
+        <p class="mt-4 text-gray-400 tracking-widest uppercase font-light">Equipamiento oficial para colonización marciana 2026</p>
+        <button class="mt-10 bg-white text-black px-10 py-4 font-black rounded-full hover:bg-gray-200 transition transform hover:scale-105">
+            RESERVAR BILLETE
+        </button>
+    </main>
+
+    <!-- Galería de Planetas -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-10 bg-white text-black">
+        <div class="planet-card overflow-hidden bg-gray-100 p-6 flex flex-col items-center">
+            <img src="https://upload.wikimedia.org" class="w-64 h-64 object-cover rounded-full shadow-2xl mb-6">
+            <h3 class="font-black text-3xl">JUPITER AIR</h3>
+            <p class="text-gray-500 italic">Gravedad máxima, rendimiento extremo.</p>
+        </div>
+        <div class="planet-card overflow-hidden bg-gray-100 p-6 flex flex-col items-center">
+            <img src="https://upload.wikimedia.org" class="w-64 h-64 object-cover rounded-full shadow-2xl mb-6">
+            <h3 class="font-black text-3xl">MARS RED</h3>
+            <p class="text-gray-500 italic">Resistencia en terrenos desérticos.</p>
+        </div>
+        <div class="planet-card overflow-hidden bg-gray-100 p-6 flex flex-col items-center">
+            <img src="https://upload.wikimedia.org" class="w-64 h-64 object-cover rounded-full shadow-2xl mb-6">
+            <h3 class="font-black text-3xl">LUNAR ONE</h3>
+            <p class="text-gray-500 italic">Ligereza total. Siente el vacío.</p>
+        </div>
+    </section>
+
+    <footer class="p-20 text-center text-gray-600 text-xs">
+        © 2026 NASA x NIKE INTERSTELLAR. TODOS LOS DERECHOS RESERVADOS.
+    </footer>
+
+</body>
+</html>
 
